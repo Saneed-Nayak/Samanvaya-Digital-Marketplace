@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+@theme{
+ --font-sans:"Plus Jakarta Sans","Manrope",ui-sans-system,system-ui,sans-serif;
+ --color-navy-950:#061631;--color-navy-900:#0B1F4B;--color-navy-800:#122B63;--color-navy-700:#1B3A7D;--color-navy-50:#EEF2FB;
+ --color-teal-brand:#0E9F8C;--color-teal-dark:#0B7E6F;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-sans);color:#0f172a;background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+*{-webkit-tap-highlight-color:transparent}
+.no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{scrollbar-width:none}
+.clamp2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.clamp3{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+@layer components{
+.input{width:100%;border:1px solid #e2e8f0;border-radius:0.85rem;padding:0.72rem 1rem;font-size:0.925rem;background:#fff;outline:none;transition:.15s}
+.input:focus{border-color:#0E9F8C;box-shadow:0 0 0 3px rgba(14,159,140,.15)}
+.label{display:block;font-size:.8rem;font-weight:600;color:#334155;margin-bottom:.35rem}
+.btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:#0B1F4B;color:#fff;font-weight:700;border-radius:.85rem;padding:.75rem 1.4rem;font-size:.925rem;transition:.15s;min-height:44px}
+.btn-primary:hover{background:#122B63}
+.btn-teal{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:#0E9F8C;color:#fff;font-weight:700;border-radius:.85rem;padding:.75rem 1.4rem;font-size:.925rem;transition:.15s;min-height:44px}
+.btn-teal:hover{background:#0B7E6F}
+.btn-ghost{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border:1.5px solid #e2e8f0;color:#0B1F4B;font-weight:700;border-radius:.85rem;padding:.72rem 1.3rem;font-size:.925rem;background:#fff;transition:.15s;min-height:44px}
+.btn-ghost:hover{border-color:#0E9F8C;color:#0B7E6F}
+.card-hover{transition:transform .2s,box-shadow .2s}.card-hover:hover{transform:translateY(-3px);box-shadow:0 16px 40px -12px rgba(11,31,75,.18)}
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.fade-up{animation:fadeUp .5s ease both}
+.hero-grad{background:linear-gradient(135deg,#061631 0%,#0B1F4B 52%,#0a3d5c 100%)}
